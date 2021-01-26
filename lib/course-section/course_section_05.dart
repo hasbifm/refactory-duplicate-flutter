@@ -5,7 +5,7 @@ class CourseSection05 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xffcbcdd6),
+      color: Colors.white10,
       child: Center(
         child: Padding(
           padding: const EdgeInsets.all(30.0),
@@ -137,28 +137,30 @@ class _DropdownPekerjaanState extends State<DropdownPekerjaan> {
                 ),
               ),
             ),
-            child: DropdownButton<String>(
-              value: dropdownValue,
-              icon: FaIcon(FontAwesomeIcons.angleDown),
-              isExpanded: true,
-              iconSize: 24,
-              elevation: 16,
-              style: TextStyle(color: Colors.black54, fontSize: 18),
-              onChanged: (String newValue) {
-                setState(() {
-                  dropdownValue = newValue;
-                });
-              },
-              items: <String>[
-                'Ingin Direkrut Perusahaan',
-                'Ingin Bekerja Dirumah',
-                'Ingin Meningkatkan Skill',
-              ].map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
+            child: DropdownButtonHideUnderline(
+              child: DropdownButton<String>(
+                value: dropdownValue,
+                icon: FaIcon(FontAwesomeIcons.angleDown),
+                isExpanded: true,
+                iconSize: 24,
+                elevation: 16,
+                style: TextStyle(color: Colors.black54, fontSize: 18),
+                onChanged: (String newValue) {
+                  setState(() {
+                    dropdownValue = newValue;
+                  });
+                },
+                items: <String>[
+                  'Ingin Direkrut Perusahaan',
+                  'Ingin Bekerja Dirumah',
+                  'Ingin Meningkatkan Skill',
+                ].map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(value),
+                  );
+                }).toList(),
+              ),
             ),
           ),
         ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:refactory/test.dart';
+import 'package:refactory/rsp.dart';
 import 'course.dart';
 import 'home.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -15,10 +15,12 @@ class Refactory extends StatefulWidget {
 }
 
 class _RefactoryState extends State<Refactory> {
+  String title = "Refactory";
   int index = 0;
   List<Widget> list = [
     Home(),
     Course(),
+    RSP(),
   ];
 
   @override
@@ -28,12 +30,14 @@ class _RefactoryState extends State<Refactory> {
       title: "Refactory",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Refactory"),
+          backgroundColor: Color(0xff0c162a),
+          title: Text(title),
         ),
         body: list[index],
         drawer: NavigationDrawer(
-          onTap: (ctx, i) {
+          onTap: (ctx, i, ttl) {
             setState(() {
+              title = ttl;
               index = i;
               Navigator.pop(ctx);
             });
@@ -86,15 +90,15 @@ class NavigationDrawer extends StatelessWidget {
           )),
           ListTile(
             title: _listItem("Beranda"),
-            onTap: () => onTap(context, 0),
+            onTap: () => onTap(context, 0, "Refactory"),
           ),
           ListTile(
             title: _listItem("Course"),
-            onTap: () => onTap(context, 1),
+            onTap: () => onTap(context, 1, "Course"),
           ),
           ListTile(
             title: _listItem("RSP"),
-            onTap: () => onTap(context, 1),
+            onTap: () => onTap(context, 2, "RSP"),
           ),
           ListTile(
             title: _listItem("Untuk Perusahaan"),
