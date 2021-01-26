@@ -24,10 +24,10 @@ class HomeSection04 extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
-              color: Colors.blue,
+              color: Colors.white,
               padding: EdgeInsets.all(20),
               child: Image(
-                image: AssetImage('assets/refactory-logo.png'),
+                image: AssetImage('assets/Group-33.png'),
                 width: 100,
                 height: 100,
               ),
@@ -178,7 +178,7 @@ class HomeSection04 extends StatelessWidget {
               margin: EdgeInsets.only(top: 30),
               alignment: Alignment.centerLeft,
               child: Text(
-                "Ada Proyek Untuk Kmmi?",
+                "Ada Proyek Untuk Kami?",
                 style: TextStyle(
                   color: Colors.white,
                 ),

@@ -38,10 +38,10 @@ class HomeSection02 extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
-            color: Colors.blue,
+            color: Colors.white,
             padding: EdgeInsets.all(20),
             child: Image(
-              image: AssetImage('assets/refactory-logo.png'),
+              image: AssetImage('assets/Group-33.jpg'),
               width: 100,
               height: 100,
             ),
@@ -206,7 +206,7 @@ class HomeSection02 extends StatelessWidget {
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
